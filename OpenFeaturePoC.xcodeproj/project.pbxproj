@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		372E33812DF9ABC40063F2BC /* OpenFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 372E33802DF9ABC40063F2BC /* OpenFeature */; };
+		37C90F202DFEE35F005A1049 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 37C90F1F2DFEE357005A1049 /* README.md */; };
+		37C90F4A2DFF19C3005A1049 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 37C90F492DFF19C3005A1049 /* Config.xcconfig */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		372E33632DF9A9320063F2BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +33,26 @@
 		372E33552DF9A9300063F2BC /* OpenFeaturePoC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenFeaturePoC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		372E33622DF9A9320063F2BC /* OpenFeaturePoCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenFeaturePoCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		372E336C2DF9A9320063F2BC /* OpenFeaturePoCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenFeaturePoCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37C90F1F2DFEE357005A1049 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		37C90F492DFF19C3005A1049 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		37C90F4F2DFF3CD3005A1049 /* Exceptions for "OpenFeaturePoC" folder in "OpenFeaturePoC" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 372E33542DF9A9300063F2BC /* OpenFeaturePoC */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		372E33572DF9A9300063F2BC /* OpenFeaturePoC */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				37C90F4F2DFF3CD3005A1049 /* Exceptions for "OpenFeaturePoC" folder in "OpenFeaturePoC" target */,
+			);
 			path = OpenFeaturePoC;
 			sourceTree = "<group>";
 		};
@@ -52,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372E33812DF9ABC40063F2BC /* OpenFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +97,16 @@
 		372E334C2DF9A92F0063F2BC = {
 			isa = PBXGroup;
 			children = (
+				37C90F492DFF19C3005A1049 /* Config.xcconfig */,
+				37C90F1F2DFEE357005A1049 /* README.md */,
 				372E33572DF9A9300063F2BC /* OpenFeaturePoC */,
 				372E33652DF9A9320063F2BC /* OpenFeaturePoCTests */,
 				372E336F2DF9A9320063F2BC /* OpenFeaturePoCUITests */,
 				372E33562DF9A9300063F2BC /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		372E33562DF9A9300063F2BC /* Products */ = {
 			isa = PBXGroup;
@@ -102,6 +128,8 @@
 				372E33512DF9A9300063F2BC /* Sources */,
 				372E33522DF9A9300063F2BC /* Frameworks */,
 				372E33532DF9A9300063F2BC /* Resources */,
+				37C90F472DFEE780005A1049 /* SwiftLint */,
+				37C90F482DFEE7AD005A1049 /* SwiftFormat */,
 			);
 			buildRules = (
 			);
@@ -112,6 +140,7 @@
 			);
 			name = OpenFeaturePoC;
 			packageProductDependencies = (
+				372E33802DF9ABC40063F2BC /* OpenFeature */,
 			);
 			productName = OpenFeaturePoC;
 			productReference = 372E33552DF9A9300063F2BC /* OpenFeaturePoC.app */;
@@ -195,6 +224,9 @@
 			);
 			mainGroup = 372E334C2DF9A92F0063F2BC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				372E337F2DF9ABC40063F2BC /* XCRemoteSwiftPackageReference "swift-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 372E33562DF9A9300063F2BC /* Products */;
 			projectDirPath = "";
@@ -212,6 +244,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C90F202DFEE35F005A1049 /* README.md in Resources */,
+				37C90F4A2DFF19C3005A1049 /* Config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +264,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37C90F472DFEE780005A1049 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n    \nif which xcrun >/dev/null; then\n  xcrun --sdk macosx /opt/homebrew/bin/swiftlint --config \"${SRCROOT}/.swiftlint.yml\"\nelse\n  echo \"warning: SwiftLint not installed\"\nfi\n";
+		};
+		37C90F482DFEE7AD005A1049 /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -x /opt/homebrew/bin/swiftformat ]; then\n  echo \"Running SwiftFormat...\"\n  echo \"/opt/homebrew/bin/swiftformat ${SRCROOT} --config ${SRCROOT}/.swiftformat\"\n  /opt/homebrew/bin/swiftformat \"${SRCROOT}\" --config \"${SRCROOT}/.swiftformat\"\nelse\n  echo \"warning: SwiftFormat not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		372E33512DF9A9300063F2BC /* Sources */ = {
@@ -271,6 +346,7 @@
 /* Begin XCBuildConfiguration section */
 		372E33742DF9A9320063F2BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37C90F492DFF19C3005A1049 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -308,6 +384,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FLAGSMITH_ENVIRONMENT_KEY = "$(FLAGSMITH_ENV_KEY)";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -335,6 +412,7 @@
 		};
 		372E33752DF9A9320063F2BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37C90F492DFF19C3005A1049 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -372,6 +450,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FLAGSMITH_ENVIRONMENT_KEY = "$(FLAGSMITH_ENV_KEY)";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -399,7 +478,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6FJ8MX2K25;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -410,6 +490,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oleksa.OpenFeaturePoC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -427,7 +508,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6FJ8MX2K25;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -438,6 +520,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oleksa.OpenFeaturePoC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -558,6 +641,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		372E337F2DF9ABC40063F2BC /* XCRemoteSwiftPackageReference "swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/open-feature/swift-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		372E33802DF9ABC40063F2BC /* OpenFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 372E337F2DF9ABC40063F2BC /* XCRemoteSwiftPackageReference "swift-sdk" */;
+			productName = OpenFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 372E334D2DF9A92F0063F2BC /* Project object */;
 }

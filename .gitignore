@@ -1,0 +1,12 @@
+# Xcode
+DerivedData/
+*.xcuserstate
+*.xcworkspace/xcuserdata
+*.xcscmblueprint
+
+# SwiftPM
+.build/
+
+# User settings
+*.xcuserdatad/
+*.xcuserdata/
